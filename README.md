@@ -6,4 +6,4 @@ First Feed page
 
 Feed 페이지입니다.
 
-![Alt text](./description_img.jpg)
+![Alt text](./description_img.png)
