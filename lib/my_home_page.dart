@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'about.dart';
 import 'feed.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -15,7 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,
-      body: FeedPage(),
+      body: About(),
     );
   }
 }
