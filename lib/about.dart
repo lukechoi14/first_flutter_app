@@ -11,9 +11,8 @@ class About extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(18, 50, 18, 18),
+            padding: const EdgeInsets.fromLTRB(18, 50, 18, 25),
             margin: const EdgeInsets.only(bottom: 20),
-            color: const Color(0xFFf7be7c),
             child: Column(
               children: [
                 Row(
@@ -23,8 +22,9 @@ class About extends StatelessWidget {
                     Icon(Icons.search, size: 30,)
                   ]
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       height:80,
@@ -37,19 +37,32 @@ class About extends StatelessWidget {
                         )
                       ),
                     ),
-                    Padding(padding: const EdgeInsets.only(right:30),
+                    Padding(padding: const EdgeInsets.only(right: 30),
                     child: Column(
                       children: const [
-                        Text("Dylan Ahmed",style: TextStyle(fontSize: 20),),
-                        Text("App developer",style: TextStyle(fontSize: 20),),
+                        Text("Dylan Ahmed",style: TextStyle(fontSize: 25,color: Color(0xFF0d253e)),),
+                        Text("App developer",style: TextStyle(fontSize: 18),),
                       ],
                     ),)
                   ],
                 )
               ],
             ),
-
-          )
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50.0),
+              color: const Color(0xFFf7be7c),
+            ),
+          ),
+          Expanded(child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.only(left:18, right:18),
+              child: Column(
+                children: const [
+                  Text("My Task", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048)))
+                ],
+              )
+            ),
+          ))
         ],
 
       ),
