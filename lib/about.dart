@@ -1,3 +1,4 @@
+import 'package:contact/icon_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -56,11 +57,89 @@ class About extends StatelessWidget {
           Expanded(child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.only(left:18, right:18),
-              child: Column(
+              child:Column(
+                children: [
+             Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  Text("My Task", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048)))
+                  Text("My Task", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
+                  IconContainer(size:30,width:80,height: 80,bgColor: Color(0xFF3d9398),index: 0,borderColor: Colors.grey,)
                 ],
-              )
+              ),
+                const SizedBox(height:20),
+                  Row(
+                    children: [
+                      const IconContainer(size:30,width:80,height: 80,bgColor: Color(0xFFe46471),index: 1,borderColor: Colors.grey,),
+                      const SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text("My Task", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
+                          Text("I have tasks to do", style: TextStyle(fontSize: 24,color:Color(0xFFa6a299))),
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(height:20),
+                  Row(
+                    children: [
+                      const IconContainer(size:30,width:80,height: 80,bgColor: Color(0xFFf7be7c),index: 2,borderColor: Colors.grey,),
+                      const SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text("April Tasks", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
+                          Text("Business Trip", style: TextStyle(fontSize: 24,color:Color(0xFFa6a299))),
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(height:20),
+                  Row(
+                    children: [
+                      const IconContainer(size:30,width:80,height: 80,bgColor: Color(0xFF6688e4),index: 3,borderColor: Colors.grey,),
+                      const SizedBox(width: 10,),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text("Location", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
+                          Text("Meeting Clients", style: TextStyle(fontSize: 24,color:Color(0xFFa6a299))),
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 20,),
+                  Row(
+                    children: const [
+                      Text("Active Projects", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        width:180,
+                        height:250,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          color: Color(0xFF3d9393)
+                        ),
+                        child: Column(
+                          children: const [
+                            Padding(padding: EdgeInsets.only(left:10,right:10,top:50),
+                            child:IconContainer(width:80,height:80,size:30,index:4,bgColor:Color(0xFF3d9393),borderColor:Color(0xFF459ea2)),
+                            ),
+                            SizedBox(height:20),
+                            Text("Medical App", style: TextStyle(fontSize: 22),)
+                          ],
+                        ),
+                      ),
+
+                    ],
+                  )
+
+                ],
+    ),
+
             ),
           ))
         ],
