@@ -7,7 +7,7 @@ class BottomNavyBar extends StatelessWidget {
 
   // const BottomNavyBar({Key? key}) : super(key: key);
   const BottomNavyBar({
-    required Key key,
+    Key? key,
     this.selectedIndex = 0,
     this.showElevation = true,
     this.iconSize =24,
@@ -17,7 +17,7 @@ class BottomNavyBar extends StatelessWidget {
     this.animationDuration = const Duration(milliseconds: 270),
     this.mainAxisAlignment =  MainAxisAlignment.spaceBetween,
     required this.items,
-    required this.onItemSelected,
+    this.onItemSelected,
     this.curve = Curves.linear,
 }) : assert(items.length >= 2 && items.length<=5),
   super(key: key);
@@ -28,7 +28,7 @@ class BottomNavyBar extends StatelessWidget {
   final bool showElevation;
   final Duration animationDuration;
   final List<BottomNavyBarItem> items;
-  final ValueChanged<int> onItemSelected;
+  final ValueChanged<int>? onItemSelected;
   final MainAxisAlignment mainAxisAlignment;
   final double itemCornerRadius;
   final double containerHeight;
@@ -57,7 +57,7 @@ class BottomNavyBar extends StatelessWidget {
             children: items.map((item) {
               var index = items.indexOf(item);
               return GestureDetector(
-                onTap: ()=> onItemSelected(index),
+                onTap: ()=> onItemSelected!(index),
                 child: _ItemWidget(
                   item: item,
                   iconSize: iconSize,
@@ -160,13 +160,13 @@ class BottomNavyBarItem {
     required this.icon,
     required this.title,
     this.activeColor = Colors.redAccent,
-    required this.textAlign,
+    this.textAlign,
     this.inactiveColor= Colors.amber,
 });
   final Widget icon;
   final Widget title;
   final Color activeColor;
   final Color inactiveColor;
-  final TextAlign textAlign;
+  final TextAlign? textAlign;
 
 }
