@@ -114,7 +114,9 @@ class About extends StatelessWidget {
                       Text("Active Projects", style: TextStyle(fontSize: 30,color:Color(0xFF1a3048))),
                     ],
                   ),
+                  const SizedBox(height: 10,),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         width:180,
@@ -129,11 +131,31 @@ class About extends StatelessWidget {
                             child:IconContainer(width:80,height:80,size:30,index:4,bgColor:Color(0xFF3d9393),borderColor:Color(0xFF459ea2)),
                             ),
                             SizedBox(height:20),
-                            Text("Medical App", style: TextStyle(fontSize: 22),)
+                            Text("Medical App", style: TextStyle(fontSize: 22,color: Colors.white),),
+                            SizedBox(height:10),
+                            Text("They make pills", style: TextStyle(fontSize: 18,color: Colors.white),),
                           ],
                         ),
                       ),
-
+                      Container(
+                        width:180,
+                        height:250,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                            color: Color(0xFFe46471)
+                        ),
+                        child: Column(
+                          children: const [
+                            Padding(padding: EdgeInsets.only(left:10,right:10,top:50),
+                              child:IconContainer(width:80,height:80,size:30,index:5,bgColor:Color(0xFFe46471),borderColor: Colors.grey),
+                            ),
+                            SizedBox(height:20),
+                            Text("Construction", style: TextStyle(fontSize: 22,color: Colors.white),),
+                            SizedBox(height:10),
+                            Text("Build things", style: TextStyle(fontSize: 18,color: Colors.white),),
+                          ],
+                        ),
+                      ),
                     ],
                   )
 
