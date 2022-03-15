@@ -7,6 +7,7 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       color: const Color(0xFFfef9eb),
       child: Column(
@@ -119,7 +120,7 @@ class About extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width:180,
+                        width:size.width*0.43,
                         height:250,
                         decoration: const BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(50)),
@@ -138,7 +139,7 @@ class About extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width:180,
+                        width:size.width*0.43,
                         height:250,
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(50)),
